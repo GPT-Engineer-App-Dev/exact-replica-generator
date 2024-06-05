@@ -1,4 +1,4 @@
-import { Box, Container, Flex, VStack, HStack, Text, Input, Select, Button, Table, Thead, Tbody, Tr, Th, Td, IconButton, Avatar, Spacer, Pagination, PaginationItem, PaginationLink } from "@chakra-ui/react";
+import { Box, Container, Flex, VStack, HStack, Text, Input, Select, Button, Table, Thead, Tbody, Tr, Th, Td, IconButton, Avatar, Spacer } from "@chakra-ui/react";
 import { FaBell, FaQuestionCircle, FaPlus, FaFilter, FaSort, FaFileImport, FaFileExport, FaPen, FaTrash } from "react-icons/fa";
 
 const Index = () => {
@@ -77,26 +77,12 @@ const Index = () => {
           <Flex justify="space-between" align="center" mt={4}>
             <Text>106 results</Text>
             <HStack spacing={2}>
-              <Pagination>
-                <PaginationItem>
-                  <PaginationLink>1</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink>2</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink>3</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink>...</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink>10</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink>11</PaginationLink>
-                </PaginationItem>
-              </Pagination>
+              <Button size="sm">1</Button>
+              <Button size="sm">2</Button>
+              <Button size="sm">3</Button>
+              <Button size="sm">...</Button>
+              <Button size="sm">10</Button>
+              <Button size="sm">11</Button>
             </HStack>
           </Flex>
         </Box>
