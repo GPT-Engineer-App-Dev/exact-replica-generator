@@ -1,5 +1,5 @@
-import { Box, Container, Flex, VStack, HStack, Text, Input, Select, Button, Table, Thead, Tbody, Tr, Th, Td, IconButton, Avatar, Spacer } from "@chakra-ui/react";
-import { FaBell, FaQuestionCircle, FaPlus, FaFilter, FaSort, FaFileImport, FaFileExport, FaPen, FaTrash } from "react-icons/fa";
+import { Box, Container, Flex, VStack, HStack, Text, Input, Select, Button, Table, Thead, Tbody, Tr, Th, Td, IconButton, Avatar, Spacer, Checkbox } from "@chakra-ui/react";
+import { FaBell, FaQuestionCircle, FaPlus, FaFilter, FaSort, FaFileImport, FaFileExport, FaPen, FaTrash, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -44,7 +44,7 @@ const Index = () => {
           <Table variant="simple">
             <Thead>
               <Tr>
-                <Th><Input type="checkbox" /></Th>
+                <Th><Checkbox /></Th>
                 <Th>ITEM</Th>
                 <Th>VALUE ($)</Th>
                 <Th>DATA</Th>
@@ -56,12 +56,12 @@ const Index = () => {
             <Tbody>
               {Array(10).fill("").map((_, index) => (
                 <Tr key={index}>
-                  <Td><Input type="checkbox" /></Td>
+                  <Td><Checkbox /></Td>
                   <Td>Lorem dolore</Td>
                   <Td>9,000</Td>
                   <Td>Data series</Td>
                   <Td>DD/MM/YY</Td>
-                  <Td><Button size="sm">Status</Button></Td>
+                  <Td><Button size="sm" variant="outline">Status</Button></Td>
                   <Td>
                     <HStack spacing={2}>
                       <IconButton aria-label="Edit" icon={<FaPen />} size="sm" />
@@ -77,12 +77,14 @@ const Index = () => {
           <Flex justify="space-between" align="center" mt={4}>
             <Text>106 results</Text>
             <HStack spacing={2}>
+              <IconButton aria-label="Previous Page" icon={<FaChevronLeft />} size="sm" />
               <Button size="sm">1</Button>
               <Button size="sm">2</Button>
               <Button size="sm">3</Button>
               <Button size="sm">...</Button>
               <Button size="sm">10</Button>
               <Button size="sm">11</Button>
+              <IconButton aria-label="Next Page" icon={<FaChevronRight />} size="sm" />
             </HStack>
           </Flex>
         </Box>
